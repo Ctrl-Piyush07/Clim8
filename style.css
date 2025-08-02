@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #007db7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-container{
+    margin-top: 8%;
+    background: linear-gradient(to bottom right, #4c98bc, #376e87);
+    height:20em;
+    width:22em;
+    border-radius: 10px;
+}
+
+.h2-one{
+    text-align: center;
+    margin-top:10%;
+    color: #FFD700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    font-size: 28px;
+}
+
+.input-div-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.7rem;
+    margin-top: 10%;
+}
+
+#city{
+    height:3em;
+    color:black;
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#city::placeholder{
+    color:#1878a4;
+    font-size: 16px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:3em;
+    width:3em;
+    background: linear-gradient(90deg, #256fa7 0%, #43cea2 100%);
+    border-radius: 7px;
+    border: none;
+}
+
+.search:hover{
+    background: linear-gradient(90deg, #43cea2 0%, #256fa7 100%);
+}
+
+.separate{
+    margin-top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+hr{
+    width:7em;
+    color:#e0d4d4;
+}
+
+.para-one{
+    color:lightcyan;
+}
+
+.input-div-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-2{
+    margin-top: 10%;
+    padding: 10px;
+    background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+    border: none;
+    border-radius: 7px;
+    color:lightcyan;
+    font-size: 15px;
+}
+
+.btn-2:hover{
+    background: linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+}
+
+.result-container{
+    margin-top: 8%;
+    background: linear-gradient(to bottom right, #4c98bc, #376e87);
+    height:15em;
+    width:22em;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.h3-one{
+    color:white;
+    text-align: center;
+    margin-top:3%;
+}
+
+.para-two{
+    margin-top:3%;
+    color:white;
+    text-align: center;
+}
+
+.h4-one,.para-three,.para-four,.para-five{
+    margin-top: 2%;
+    color:white;
+    text-align: center;
+}
+
+/* For devices with max width 768px (e.g., tablets & large phones) */
+@media screen and (max-width: 768px) {
+
+  /* Center everything with spacing */
+  body {
+    padding: 20px;
+    flex-direction: column; /* Stack layout vertically */
+  }
+
+  /* Weather container should be responsive */
+  .weather-container {
+    width: 90%; /* Use almost full screen width */
+    height: auto; /* Let it expand naturally */
+    margin-top: 15%;
+    padding: 20px;
+  }
+
+  /* Keep search input and button in a row */
+  .input-div-1 {
+    flex-direction: row; /* Ensure they stay side-by-side */
+    flex-wrap: wrap;     /* Allow wrapping on small widths */
+    gap: 0.7rem;
+  }
+
+  #city {
+    width: 70%; /* Slightly reduced width to avoid overflow */
+  }
+
+  .search {
+    width: 3em; /* Keep the button size same as before */
+    height: 3em;
+  }
+
+  /* Result container responsiveness */
+  .result-container {
+    width: 90%;
+    height: auto;
+    margin-top: 10%;
+    padding: 15px;
+  }
+
+  /* Adjust hr width in separator */
+  hr {
+    width: 30%;
+  }
+
+  /* Smaller font sizes for better fit */
+  .h2-one {
+    font-size: 24px;
+  }
+
+  .h3-one {
+    font-size: 20px;
+  }
+
+  .para-two,
+  .h4-one,
+  .para-three,
+  .para-four,
+  .para-five {
+    font-size: 14px;
+  }
+}
+
+/* For very small phones (max width 480px) */
+@media screen and (max-width: 480px) {
+
+  .h2-one {
+    font-size: 20px;
+  }
+
+  .h3-one {
+    font-size: 18px;
+  }
+
+  .para-two,
+  .h4-one,
+  .para-three,
+  .para-four,
+  .para-five {
+    font-size: 13px;
+  }
+
+  /* Weather and result container tweaks for small screens */
+  .weather-container,
+  .result-container {
+    width: 95%;
+    padding: 15px;
+    margin-top: 12%;
+  }
+
+  #city {
+    width: 65%;
+    font-size: 14px;
+  }
+
+  .btn-2 {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #city::placeholder {
+    font-size: 14px;
+  }
+}
